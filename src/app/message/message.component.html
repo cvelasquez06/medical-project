@@ -1,0 +1,9 @@
+<div [class]="'alert alert-' + typeMessage" role="alert" *ngIf="mensaje.show">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h4 class="alert-heading">{{mensaje.title}}</h4>
+  <p>{{bodyMessage}}</p>
+  <hr>
+  <small class="mb-0">{{footerMessage}}</small>
+</div>

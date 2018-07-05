@@ -1,0 +1,98 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+          <img src="../../../assets/i/logo.png" class="rounded mx-auto d-block" width="48px">
+      </li>
+      <li class="nav-item">
+        <hr>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard">
+         <i-home></i-home>
+          Dashboard <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i-file></i-file>
+          Ordenes
+        </a>
+      </li>
+
+      <!--Inventario-->
+      <li class="nav-item mouse">
+        <a class="nav-link ptoggle" id="inventario">
+          <i-shopping-bag></i-shopping-bag>Gestión de Inventario
+        </a>
+      </li>
+      <li class="nav-item mouse ml-4 itoggle" data-item="inventario">
+        <a class="nav-link" routerLink="inventario">
+          <i-shopping-cart></i-shopping-cart>
+          Detalle de Articulo
+        </a>
+      </li>
+      <!---->
+
+      <!--Auxiliares-->
+      <li class="nav-item mouse">
+        <a class="nav-link ptoggle" id="auxiliar">
+          <i-users></i-users>Auxiliares
+        </a>
+      </li>
+      <li class="nav-item mouse ml-4 itoggle" data-item="auxiliar">
+        <a class="nav-link" routerLink="/cliente">
+          <i-users></i-users>Clientes</a>
+      </li>
+      <li class="nav-item mouse ml-4 itoggle" data-item="auxiliar">
+        <a class="nav-link" routerLink="/proveedor">
+          <i-users></i-users>Proveedores</a>
+      </li>
+      <!---->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i-bar-chart-2></i-bar-chart-2>
+          Reportes
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i-layers></i-layers>
+          Integraciones
+        </a>
+      </li>
+    </ul>
+
+    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+      <span>Informes disponibles</span>
+    </h6>
+
+    <ul class="nav flex-column mb-2">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i-file-text></i-file-text>
+          Current month
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i-file-text></i-file-text>
+          Last quarter
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i-file-text></i-file-text>
+          Social engagement
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i-file-text></i-file-text>
+          Year-end sale
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+

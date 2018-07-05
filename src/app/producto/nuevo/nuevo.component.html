@@ -1,0 +1,253 @@
+
+<app-menu-vista [vista]="{
+  nombre: 'Nuevo Producto',
+  titulo: 'Productos'
+}"></app-menu-vista>
+<h5>Nuevo Producto</h5>
+<div class="row">
+  <div class="col-sm-12">
+    <form [formGroup]="fCrearProducto"
+          (ngSubmit)="guardarProducto()" novalidate="novalidate">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="inline float-right">
+            <div class="btn-group">
+              <button
+                class="btn btn-sm btn-outline-secondary mr-2">
+                <i-save></i-save>
+                <span>Guardar</span>
+              </button>
+              <button class="btn btn-sm btn-outline-secondary">
+                <i-trash-2></i-trash-2>
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="numeroparte">Número de Parte</label>
+              <input type="text" class="form-control" id="numeroparte" placeholder="Número de Parte"
+                     name="numeroparte" autocomplete="off" formControlName="numeroparte">
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="descripcion">Descripción</label>
+              <input type="text" class="form-control" id="descripcion"
+                     placeholder="Descripción" name="descripcion"
+                     autocomplete="off" formControlName="descripcion">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="row">
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="fabricante">Fabricante</label>
+              <select id="fabricante" class="form-control" name="fabricante"
+                      formControlName="fabricante">
+                <option value="0" selected>Seleccione...</option>
+                <option value="1">Fabricante 1</option>
+                <option value="2">Fabricante 2</option>
+                <option value="3">Fabricante 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="numeroParteFabricante">Código Fabricante</label>
+              <input type="text" class="form-control" id="numeroParteFabricante"
+                     placeholder="Número Parte Fabricante"
+                     name="numeropartefabricante" autocomplete="off" formControlName="numeropartefabricante">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="row">
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="grupo">Grupo</label>
+              <select id="grupo" name="grupo" class="form-control" formControlName="grupo">
+                <option value="0" selected>Seleccione...</option>
+                <option value="1">Grupo 1</option>
+                <option value="2">Grupo 2</option>
+                <option value="3">Grupo 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="subGrupo">Sub-Grupo</label>
+              <select id="subGrupo" name="subgrupo" class="form-control"
+                      formControlName="subgrupo">
+                <option value="0" selected>Seleccione...</option>
+                <option value="1">Sub-Grupo 1</option>
+                <option value="2">Sub-Grupo 2</option>
+                <option value="3">Sub-Grupo 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="row">
+        <div class="col-3">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="peso">Peso(kg)</label>
+              <input type="text" name="peso" id="peso" placeholder="kg" class="form-control"
+                     formControlName="peso">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="ancho">Ancho(cm)</label>
+              <input type="text" name="ancho" id="ancho" placeholder="cm" class="form-control"
+                     formControlName="ancho">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="alto">Alto(cm)</label>
+              <input type="text" name="alto" id="alto" placeholder="cm" class="form-control"
+                     formControlName="alto">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="largo">Largo(cm)</label>
+              <input type="text" name="largo" id="largo" placeholder="cm" class="form-control"
+                     formControlName="largo">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="row">
+        <div class="col-3">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="talla">Talla</label>
+              <input type="text" name="talla" id="talla" placeholder="XS-S-M-L-XL-XXL-XXXL"
+                     class="form-control" formControlName="talla">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="color">Color</label>
+              <select id="color" name="color" class="form-control" formControlName="color">
+                <option value="0" selected>Seleccione...</option>
+                <option value="1">Blanco</option>
+                <option value="2">Rojo</option>
+                <option value="3">Azul</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="disolucion">Disolucion(%)</label>
+              <input type="text" name="disolucion" id="disolucion" placeholder="%"
+                     class="form-control" formControlName="disolucion">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="capacidad">Capacidad(lts)</label>
+              <input type="text" name="capacidad" id="capacidad" placeholder="lts"
+                     class="form-control" formControlName="capacidad">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="row">
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="envase">Tipo de Envase</label>
+              <select id="envase" name="envase" class="form-control" formControlName="envase">
+                <option value="0" selected>Seleccione...</option>
+                <option value="1">Plastico</option>
+                <option value="2">Vidrio</option>
+                <option value="3">Caja 10x10</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="tapa">Tipo de Tapa</label>
+              <select id="tapa" name="tapa" class="form-control" formControlName="tapa">
+                <option value="0" selected>Seleccione...</option>
+                <option value="1">Tapa Rosca</option>
+                <option value="2">Tapa Presion</option>
+                <option value="3">Tapa Sello</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <!---->
+      <div class="row">
+        <div class="col-12">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input mouse" id="foto" name="foto"
+                         accept="image/*" formControlName="imagen">
+                  <label class="custom-file-label" for="foto">Seleccione imagen</label>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="row">
+        <div class="col-6">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input" id="habilitado"
+                           name="habilitado" formControlName="habilitado"></div></div>
+                <input type="text" class="form-control mouse" aria-label="Small"
+                       aria-describedby="inputGroup-sizing-sm"
+                       value="Habilitar" id="habilitar" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
